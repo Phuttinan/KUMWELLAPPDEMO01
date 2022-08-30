@@ -100,25 +100,36 @@ const LocationMap = () => {
                     <LightningCal/>
                 </View>
             )}
+
             <View style={styles.legendContainer}>
-              <Image 
-                source={require('../image/lightning_icon/K_ICON_CR.png') } 
-                style={styles.legend} 
-                resizeMode='contain' 
-              /> 
-              <Text style={styles.legendText}>{'> 0-5 นาที'}</Text>
-              <Image 
-                source={require('../image/lightning_icon/K_ICON_CO.png') } 
-                style={styles.legend} 
-                resizeMode='contain' 
-              /> 
-              <Text style={styles.legendText2}>{'> 5-10 นาที'}</Text>
-              <Image 
-                source={require('../image/lightning_icon/K_ICON_CY.png') } 
-                style={styles.legend} 
-                resizeMode='contain' 
-              /> 
-              <Text style={styles.legendText3}>{'> 10-15 นาที'}</Text>
+              <View style={styles.legendContainer0}>
+                <Text style={styles.legendText0}> ห้วงเวลาเกิดฟ้าผ่า </Text>
+                <Text style={styles.legendText}> 
+                  <Image 
+                    source={require('../image/lightning_icon/K_ICON_CR.png') } 
+                    style={styles.legend} 
+                    resizeMode='contain' 
+                  /> {'> 0-5 นาที'}
+                </Text>
+            
+            <Text style={styles.legendText2}>
+            <Image 
+              source={require('../image/lightning_icon/K_ICON_CO.png') } 
+              style={styles.legend} 
+              resizeMode='contain' 
+            /> 
+            {'> 5-10 นาที'}
+            </Text>
+
+            <Text style={styles.legendText3}>
+            <Image 
+              source={require('../image/lightning_icon/K_ICON_CY.png') } 
+              style={styles.legend} 
+              resizeMode='contain' 
+            /> 
+            {'> 10-15 นาที'}
+            </Text>
+            </View>
             </View>
         </View>
       );
@@ -201,22 +212,41 @@ const styles = StyleSheet.create({
   },
   legendContainer: {
       position: 'absolute',
-      left: 8,
-      bottom: 75,
-      height: 40,
-      width: 210,
+      left: 10,
+      bottom: 35,
+      height: 110,
+      width: 110,
+      backgroundColor: "white",
+      opacity: 0.9,
+      borderRadius: 20
+
   },
+  legendContainer0: {
+    padding: 10,
+
+    
+},
   legend: {
       height: 23,
       width: 23,
       flexDirection: 'row',
       resizeMode: 'cover'
   },
+  legendText0: {
+    position: 'absolute', 
+    fontSize: 12,
+    left: 10,
+    top: 10,
+    fontWeight: "bold",
+    flexDirection: 'row',
+    resizeMode: 'cover',
+
+},
   legendText: {
       position: 'absolute', 
       fontSize: 10,
-      left: 25,
-      top: 3,
+      left: 20,
+      top: 25,
       fontWeight: "bold",
       flexDirection: 'row',
       resizeMode: 'cover'
@@ -224,15 +254,15 @@ const styles = StyleSheet.create({
   legendText2: {
       position: 'absolute', 
       fontSize: 10,
-      left: 25,
-      top: 25,
+      left: 20,
+      top: 45,
       fontWeight: "bold",
   },
   legendText3: {
       position: 'absolute', 
       fontSize: 10,
-      left: 25,
-      top: 50,
+      left: 20,
+      top: 65,
       fontWeight: "bold",
   },
   legendText4: {

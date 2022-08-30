@@ -40,7 +40,6 @@ const LightningCalculate = (props) => {
     return (
       <View style={styles.legendTopTen}>
         <Text style={styles.legendTopSubText}>ฟ้าผ่าในระยะ {dist} กม.</Text>
-        <Noti />
     </View>
       
     )
