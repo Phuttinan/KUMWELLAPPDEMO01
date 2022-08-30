@@ -234,7 +234,7 @@ const styles = StyleSheet.create({
   },
   legendText0: {
     position: 'absolute', 
-    fontSize: 12,
+    fontSize: 10,
     left: 10,
     top: 10,
     fontWeight: "bold",

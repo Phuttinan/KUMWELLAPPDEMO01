@@ -31,15 +31,19 @@ const LightningCalculate = (props) => {
   if (dist <= 5){
     return (
       <View style={styles.legendTopFive}>
-        <Text style={styles.legendTopSubText}>ฟ้าผ่าในระยะ {dist} กม.</Text>
+        <Text style={styles.legendTopSubText}>ฟ้าผ่าในระยะ {dist} กม. 
         <Noti />
+        </Text>
+        
       </View>
     )
   }
   else if (dist <= 10) {
     return (
       <View style={styles.legendTopTen}>
-        <Text style={styles.legendTopSubText}>ฟ้าผ่าในระยะ {dist} กม.</Text>
+        <Text style={styles.legendTopSubText}>ฟ้าผ่าในระยะ {dist} กม.
+        <Noti />
+        </Text>
     </View>
       
     )
@@ -47,7 +51,8 @@ const LightningCalculate = (props) => {
   else{
     return (
       <View style={styles.legendTop}>
-        <Text style={styles.legendTopSubText}>ฟ้าผ่าในระยะ {dist} กม.</Text>
+        <Text style={styles.legendTopSubText}>ฟ้าผ่าในระยะ {dist} กม.
+        </Text>
     </View>
     )
   }
@@ -125,7 +130,7 @@ const styles = StyleSheet.create({
     top: 10,
     width: 200,
     borderRadius: 10,
-    backgroundColor: 'rgba(237, 28, 36, 0.8)',
+    backgroundColor: '#8FBC8F',
     opacity: 1,
     alignItems: 'center',
     justifyContent: 'center',
@@ -153,7 +158,7 @@ const styles = StyleSheet.create({
     top: 10,
     width: 200,
     borderRadius: 10,
-    backgroundColor: 'rgba(0, 255, 0, 0.6)',
+    backgroundColor: 'rgba(62, 160, 85,0.8)',
     opacity: 1,
     alignItems: 'center',
     justifyContent: 'center',
