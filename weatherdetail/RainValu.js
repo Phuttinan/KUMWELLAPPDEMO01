@@ -8,11 +8,21 @@ const RainValu = () => {
     const [data,setData] = useState([null]);
 
     useEffect(() => {
+
         fetch('https://api.openweathermap.org/data/2.5/forecast?lat=13.7527296&lon=100.5682688&appid=7029932189870dc55f82f2589f285b4d')
             .then((response) => response.json())
             .then((json) => setData(json))
             .catch((error) => console.error(error))
             .finally(() => setLoading(false));
+            
+        let secTimer = setInterval(() => {
+        fetch('https://api.openweathermap.org/data/2.5/forecast?lat=13.7527296&lon=100.5682688&appid=7029932189870dc55f82f2589f285b4d')
+            .then((response) => response.json())
+            .then((json) => setData(json))
+            .catch((error) => console.error(error))
+            .finally(() => setLoading(false));
+        }, 30000)
+      return () => clearInterval(secTimer);
     }, [])
     if (data  === null) {
         setData(json)

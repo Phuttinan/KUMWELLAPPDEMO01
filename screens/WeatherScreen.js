@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View, ScrollView,DevSettings,RefreshControl} from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { LightningWeather } from '../LightningCall/CalculateLightning';
+// import { LightningWeather } from '../LightningCall/CalculateLightning';
 
 //screenweatherdetail
 import MoreWeather from '../weatherdetail/MoreWeather';
@@ -37,7 +37,6 @@ const WeatherScreen = ({navigation}) => {
                 />    
               }
             >
-                <LightningWeather/>
                 <View>
                     <MoreWeather />
                 </View>

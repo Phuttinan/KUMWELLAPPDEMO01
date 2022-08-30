@@ -12,6 +12,7 @@ const WindDeg = () => {
     const [location, setLocation] = useState(null);
 
     useEffect(() => {
+
         (async () => {
             let { status } = await Location.requestForegroundPermissionsAsync();
             if (status !== 'granted') {
@@ -29,6 +30,27 @@ const WindDeg = () => {
             .finally(() => setLoading(false));
           
           })();
+          
+        let secTimer = setInterval(() => {
+        (async () => {
+            let { status } = await Location.requestForegroundPermissionsAsync();
+            if (status !== 'granted') {
+              alert('Permission to access location was denied');
+              return;
+            }
+            let location = await Location.getCurrentPositionAsync({}); 
+            setLatitude(location.coords.latitude)
+            setLongitude(location.coords.longitude); 
+            
+            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${location.coords.latitude}&lon=${location.coords.longitude}&appid=9811bbec32fc5d94d09f486c06d15a35`)
+            .then((response) => response.json())
+            .then((json) => setData(json))
+            .catch((error) => console.error(error))
+            .finally(() => setLoading(false));
+          
+          })();
+        }, 30000)
+        return () => clearInterval(secTimer);
     }, [])     
 
     return(

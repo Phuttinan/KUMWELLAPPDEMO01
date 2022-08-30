@@ -4,7 +4,6 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
 const LightningAlarm = () => {
-
     return(
         <View style={styles.container} >
             <View style={styles.lightning}>

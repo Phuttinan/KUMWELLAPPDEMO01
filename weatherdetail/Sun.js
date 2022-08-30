@@ -8,11 +8,21 @@ const Sun = () => {
     const [data,setData] = useState([]);
 
     useEffect(() => {
+
+        fetch('https://api.openweathermap.org/data/2.5/weather?lat=13.7527296&lon=100.5682688&appid=9811bbec32fc5d94d09f486c06d15a35')
+        .then((response) => response.json())
+        .then((json) => setData(json))
+        .catch((error) => console.error(error))
+        .finally(() => setLoading(false));
+        
+        let secTimer = setInterval(() => {
         fetch('https://api.openweathermap.org/data/2.5/weather?lat=13.7527296&lon=100.5682688&appid=9811bbec32fc5d94d09f486c06d15a35')
             .then((response) => response.json())
             .then((json) => setData(json))
             .catch((error) => console.error(error))
             .finally(() => setLoading(false));
+        }, 30000)
+      return () => clearInterval(secTimer);
     }, [])
     //console.log(data.sys.sunrise);
     return(

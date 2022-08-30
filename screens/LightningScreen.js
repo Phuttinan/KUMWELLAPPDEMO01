@@ -3,7 +3,6 @@ import { Platform, Text, View, StyleSheet, ActivityIndicator, Dimensions, Image,
 import * as Location from 'expo-location';
 import MapView, { Marker, Circle } from 'react-native-maps';
 import LightningMarker from '../LightningCall/MarkerLightning';
-//import Noti from '../notifications/localNotifications';
 
 import LightningCalculate from '../LightningCall/CalculateLightning';
 
@@ -53,17 +52,6 @@ const LocationMap = () => {
     const lightningElement = data.map((dataLightnings, index) => {
       return <LightningMarker key={index} dataLightnings={dataLightnings} />;
     });
-    
-
-
-    // let doc = { item: []};
-    // for (let i=1; i<100; i++){
-    //   doc.item.push(lightningElement)
-    // }
-    // console.log("Push :", doc)
-
-    //console.log("lightning element", lightningElement)
-    // console.log(dataLightnings.LAT)
 
     const LightningCal = () => {
       return <LightningCalculate dataLightnings={data} />;
@@ -110,9 +98,6 @@ const LocationMap = () => {
                         />
                     </MapView>
                     <LightningCal/>
-                    
-                
-
                 </View>
             )}
             <View style={styles.legendContainer}>

@@ -9,6 +9,20 @@ const Longitude = () => {
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
+
+      (async () => {
+        let { status } = await Location.requestForegroundPermissionsAsync();
+        if (status !== 'granted') {
+          alert('Permission to access location was denied');
+          return;
+        }
+        let location = await Location.getCurrentPositionAsync({}); 
+        setLatitude(location.coords.latitude)
+        setLongitude(location.coords.longitude);
+        setLocation(location.coords);   
+      })();
+      
+        let secTimer = setInterval(() => {
         (async () => {
             let { status } = await Location.requestForegroundPermissionsAsync();
             if (status !== 'granted') {
@@ -20,6 +34,8 @@ const Longitude = () => {
             setLongitude(location.coords.longitude);
             setLocation(location.coords);   
           })();
+        }, 30000)
+      return () => clearInterval(secTimer);
     }, []) 
     return (
         <View>

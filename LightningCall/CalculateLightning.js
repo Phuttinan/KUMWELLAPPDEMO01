@@ -5,14 +5,13 @@ import { Text, StyleSheet, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Noti from '../notifications/localNotifications';
 
-
 const LightningCalculate = (props) => {
+  
   const { location, loading } = useContext(LocationsContext);
   const { dataLightnings } = props;
-  //const [disCal , setDiscal] = useState([])
   const [dist, setDist] = useState(0);
 
-  let tt = LightningWeather(dist);
+  // let tt = LightningWeather(dist);
 
   useEffect(() => {
     var item = [];
@@ -25,13 +24,8 @@ const LightningCalculate = (props) => {
       );
       item.push(dis/1000)
     }
-    //setDist(parseInt(Math.min.apply(Math, item)))
-    setDist(11)
-
-    //console.log(parseInt(Math.min.apply(Math, item)))
+    setDist(parseInt(Math.min(...item)))
     console.log(parseInt(Math.min(...item)))
-    //console.log(item)
-    console.log("distance", item.length)
   },[])
 
   if (dist <= 5){
@@ -56,6 +50,7 @@ const LightningCalculate = (props) => {
     </View>
     )
   }
+}
 
   // return (
   //   <View style={styles.legendTop}>
@@ -68,49 +63,49 @@ const LightningCalculate = (props) => {
   //   </View>
    
   // )
-}
+//}
 
-export const LightningWeather = (valueMin) => {
-  if (valueMin <= 5){
-    return (
-      <View style={styles.lightningFive}>
-        <Text style={styles.title}
-              onPress={() => navigation.navigate('LightningAlarm')}
-        > 
-          <MaterialCommunityIcons 
-            name='lightning-bolt' 
-          size={30} />มีฟ้าผ่าในระยะ {valueMin} กม.
-        </Text>
-      </View>
-    )
-  }
-  else if (valueMin <= 10) {
-    return (
-      <View style={styles.lightningTen}>
-          <Text style={styles.title}
-                onPress={() => navigation.navigate('LightningAlarm')}
-          > 
-            <MaterialCommunityIcons 
-              name='lightning-bolt' 
-            size={30} />มีฟ้าผ่าในระยะ {valueMin} กม.
-          </Text>
-      </View>
-    )
-  }
-  else{
-    return (
-      <View style={styles.lightning}>
-          <Text style={styles.title}
-                onPress={() => navigation.navigate('LightningAlarm')}
-          > 
-            <MaterialCommunityIcons 
-              name='lightning-bolt' 
-            size={30} />มีฟ้าผ่าในระยะ {valueMin} กม.
-          </Text>
-      </View>
-    )
-  }
-}
+// export const LightningWeather = (valueMin) => {
+//   if (valueMin <= 5){
+//     return (
+//       <View style={styles.lightningFive}>
+//         <Text style={styles.title}
+//               onPress={() => navigation.navigate('LightningAlarm')}
+//         > 
+//           <MaterialCommunityIcons 
+//             name='lightning-bolt' 
+//           size={30} />มีฟ้าผ่าในระยะ {valueMin} กม.
+//         </Text>
+//       </View>
+//     )
+//   }
+//   else if (valueMin <= 10) {
+//     return (
+//       <View style={styles.lightningTen}>
+//           <Text style={styles.title}
+//                 onPress={() => navigation.navigate('LightningAlarm')}
+//           > 
+//             <MaterialCommunityIcons 
+//               name='lightning-bolt' 
+//             size={30} />มีฟ้าผ่าในระยะ {valueMin} กม.
+//           </Text>
+//       </View>
+//     )
+//   }
+//   else{
+//     return (
+//       <View style={styles.lightning}>
+//           <Text style={styles.title}
+//                 onPress={() => navigation.navigate('LightningAlarm')}
+//           > 
+//             <MaterialCommunityIcons 
+//               name='lightning-bolt' 
+//             size={30} />มีฟ้าผ่าในระยะ {valueMin} กม.
+//           </Text>
+//       </View>
+//     )
+//   }
+// }
 export default LightningCalculate;
 
 const styles = StyleSheet.create({
