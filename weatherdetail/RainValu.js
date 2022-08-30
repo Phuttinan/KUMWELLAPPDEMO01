@@ -9,14 +9,14 @@ const RainValu = () => {
 
     useEffect(() => {
 
-        fetch('https://api.openweathermap.org/data/2.5/forecast?lat=13.7527296&lon=100.5682688&appid=7029932189870dc55f82f2589f285b4d')
+        fetch('https://api.openweathermap.org/data/2.5/forecast?lat=13.7527296&lon=100.5682688&appid=d192eba2efb364a2b3335c9cfb003726')
             .then((response) => response.json())
             .then((json) => setData(json))
             .catch((error) => console.error(error))
             .finally(() => setLoading(false));
             
         let secTimer = setInterval(() => {
-        fetch('https://api.openweathermap.org/data/2.5/forecast?lat=13.7527296&lon=100.5682688&appid=7029932189870dc55f82f2589f285b4d')
+        fetch('https://api.openweathermap.org/data/2.5/forecast?lat=13.7527296&lon=100.5682688&appid=d192eba2efb364a2b3335c9cfb003726')
             .then((response) => response.json())
             .then((json) => setData(json))
             .catch((error) => console.error(error))

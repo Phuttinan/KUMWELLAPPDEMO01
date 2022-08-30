@@ -1,7 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View, ScrollView,DevSettings,RefreshControl} from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-// import { LightningWeather } from '../LightningCall/CalculateLightning';
 
 //screenweatherdetail
 import MoreWeather from '../weatherdetail/MoreWeather';
@@ -27,16 +26,19 @@ const WeatherScreen = ({navigation}) => {
     return(
         <View style={styles.weatherScreen}>
             <Fetch />
-            <ScrollView style={styles.container}
-             showsHorizontalScrollIndicator={false}
-             showsVerticalScrollIndicator={false}
-                refreshControl={
+            <ScrollView style={styles.container} 
+            refreshControl={
                 <RefreshControl 
                   refreshing={refreshing}
                   onRefresh={onRefresh}
                 />    
               }
             >
+                <View style={styles.lightning}>
+                    <Text style={styles.title}
+                    onPress={() => navigation.navigate('LightningAlarm')}
+                    > <MaterialCommunityIcons name='lightning-bolt' size={30} /> Lightning Alarm!</Text>
+                </View>
                 <View>
                     <MoreWeather />
                 </View>
@@ -72,7 +74,7 @@ const WeatherScreen = ({navigation}) => {
     },
     lightning:{
         height: 100,
-        backgroundColor: 'orange',
+        backgroundColor: '#ED1B24',
         borderRadius: 20,
         justifyContent: 'center',
         borderBottomColor: '#D3D3D3',
@@ -85,6 +87,7 @@ const WeatherScreen = ({navigation}) => {
         color: '#FFF',
         fontSize: 30,
         fontWeight: '300',
+          
     }
 })
 

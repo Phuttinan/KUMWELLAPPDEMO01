@@ -27,7 +27,7 @@ const Rain = () => {
             setLatitude(location.coords.latitude)
             setLongitude(location.coords.longitude); 
             
-            fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${location.coords.latitude}&lon=${location.coords.longitude}&appid=7029932189870dc55f82f2589f285b4d`)
+            fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${location.coords.latitude}&lon=${location.coords.longitude}&appid=d192eba2efb364a2b3335c9cfb003726`)
             .then((response) => response.json())
             .then((json) => setData(json))
             .catch((error) => console.error(error))
@@ -46,7 +46,7 @@ const Rain = () => {
             setLatitude(location.coords.latitude)
             setLongitude(location.coords.longitude); 
             
-            fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${location.coords.latitude}&lon=${location.coords.longitude}&appid=7029932189870dc55f82f2589f285b4d`)
+            fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${location.coords.latitude}&lon=${location.coords.longitude}&appid=d192eba2efb364a2b3335c9cfb003726`)
             .then((response) => response.json())
             .then((json) => setData(json))
             .catch((error) => console.error(error))

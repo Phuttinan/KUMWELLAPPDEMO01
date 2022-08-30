@@ -25,7 +25,7 @@ const PM25 = () => {
             setLatitude(location.coords.latitude)
             setLongitude(location.coords.longitude); 
             
-            fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${location.coords.latitude}&lon=${location.coords.longitude}&appid=9811bbec32fc5d94d09f486c06d15a35`)
+            fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${location.coords.latitude}&lon=${location.coords.longitude}&appid=d192eba2efb364a2b3335c9cfb003726`)
             .then((response) => response.json())
             .then((json) => setData(json))
             .catch((error) => console.error(error))
@@ -43,7 +43,7 @@ const PM25 = () => {
             setLatitude(location.coords.latitude)
             setLongitude(location.coords.longitude); 
             
-            fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${location.coords.latitude}&lon=${location.coords.longitude}&appid=9811bbec32fc5d94d09f486c06d15a35`)
+            fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${location.coords.latitude}&lon=${location.coords.longitude}&appid=d192eba2efb364a2b3335c9cfb003726`)
             .then((response) => response.json())
             .then((json) => setData(json))
             .catch((error) => console.error(error))

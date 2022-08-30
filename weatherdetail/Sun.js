@@ -9,14 +9,14 @@ const Sun = () => {
 
     useEffect(() => {
 
-        fetch('https://api.openweathermap.org/data/2.5/weather?lat=13.7527296&lon=100.5682688&appid=9811bbec32fc5d94d09f486c06d15a35')
+        fetch('https://api.openweathermap.org/data/2.5/weather?lat=13.7527296&lon=100.5682688&appid=d192eba2efb364a2b3335c9cfb003726')
         .then((response) => response.json())
         .then((json) => setData(json))
         .catch((error) => console.error(error))
         .finally(() => setLoading(false));
         
         let secTimer = setInterval(() => {
-        fetch('https://api.openweathermap.org/data/2.5/weather?lat=13.7527296&lon=100.5682688&appid=9811bbec32fc5d94d09f486c06d15a35')
+        fetch('https://api.openweathermap.org/data/2.5/weather?lat=13.7527296&lon=100.5682688&appid=d192eba2efb364a2b3335c9cfb003726')
             .then((response) => response.json())
             .then((json) => setData(json))
             .catch((error) => console.error(error))
