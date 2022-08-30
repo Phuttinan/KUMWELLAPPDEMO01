@@ -6,7 +6,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Noti from '../notifications/localNotifications';
 
 const LightningCalculate = (props) => {
-  
+
   const { location, loading } = useContext(LocationsContext);
   const { dataLightnings } = props;
   const [dist, setDist] = useState(0);
@@ -25,13 +25,14 @@ const LightningCalculate = (props) => {
       item.push(dis/1000)
     }
     setDist(parseInt(Math.min(...item)))
-    console.log(parseInt(Math.min(...item)))
+    console.log("Nearest lightning is", parseInt(Math.min(...item)), "kilometers.")
   },[])
 
   if (dist <= 5){
     return (
       <View style={styles.legendTopFive}>
         <Text style={styles.legendTopSubText}>ฟ้าผ่าในระยะ {dist} กม.</Text>
+        <Noti />
       </View>
     )
   }
@@ -39,6 +40,7 @@ const LightningCalculate = (props) => {
     return (
       <View style={styles.legendTopTen}>
         <Text style={styles.legendTopSubText}>ฟ้าผ่าในระยะ {dist} กม.</Text>
+        <Noti />
     </View>
       
     )
