@@ -22,7 +22,7 @@ const Noti = () => {
     Notifications.scheduleNotificationAsync({
     content: {
         title: "Lightning Warning!",
-        body: "Hello this is a local notification!",
+        body: "There is lightning near your location!",
     },
     trigger: { seconds: 1 },
     })
