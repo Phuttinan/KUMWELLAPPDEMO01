@@ -58,14 +58,14 @@ const RainValu = () => {
         setLocation(location);
 
         fetch(
-          `http://api.weatherapi.com/v1/current.json?key=963ce7739c164d51abe144003222308&q=${location.coords.latitude},${location.coords.longitude}`
+          `http://api.weatherapi.com/v1/current.json?key=59f839a9261a469fbde192652223008&q=${location.coords.latitude},${location.coords.longitude}`
         )
           .then((response) => response.json())
           .then((json) => setData(json))
           .catch((error) => console.error(error))
           .finally(() => setLoading(false));
       })();
-    }, 30000);
+    }, 7200000);
     return () => clearInterval(secTimer);
   }, []);
   return (

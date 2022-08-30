@@ -47,7 +47,7 @@ const Humidity = () => {
             .finally(() => setLoading(false));
           
           })();
-        }, 30000)
+        }, 7200000)
         return () => clearInterval(secTimer);
     }, [])     
 
