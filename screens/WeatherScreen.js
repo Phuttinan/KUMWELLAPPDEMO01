@@ -34,11 +34,11 @@ const WeatherScreen = ({navigation}) => {
                 />    
               }
             >
-                <View style={styles.lightning}>
+                {/*<View style={styles.lightning}>
                     <Text style={styles.title}
                     onPress={() => navigation.navigate('LightningAlarm')}
                     > <MaterialCommunityIcons name='lightning-bolt' size={30} /> Lightning Alarm!</Text>
-                </View>
+            </View>*/}
                 <View>
                     <MoreWeather />
                 </View>
