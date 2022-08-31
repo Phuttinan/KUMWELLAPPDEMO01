@@ -9,8 +9,9 @@ const LightningCalculate = (props) => {
   const { location, loading } = useContext(LocationsContext);
   const { dataLightnings } = props;
   const [dist, setDist] = useState(0);
+  const [state, setState] = useState(0);
 
-  // let tt = LightningWeather(dist);
+  // console.log(dataLightnings)
 
   useEffect(() => {
     var item = [];
@@ -26,8 +27,9 @@ const LightningCalculate = (props) => {
       );
       item.push(dis / 1000);
     }
+    
     setDist(parseInt(Math.min(...item)));
-    //setDist(1000);
+    // setDist(6);
     // console.log(item);
     // console.log(dist);
     // console.log(
@@ -37,6 +39,8 @@ const LightningCalculate = (props) => {
     // );
   }, []);
 
+    
+  // console.log(state);
   if (dist > 10) {
     return (
       <View style={styles.legendTop}>
@@ -47,17 +51,17 @@ const LightningCalculate = (props) => {
     return (
       <View style={styles.legendTopTen}>
         <Text style={styles.legendTopSubText}>
-          ฟ้าผ่าในระยะ {dist} กม.
-          <Noti />
+          ฟ้าผ่าในระยะ {dist} กม. 
         </Text>
       </View>
     );
-  } else if (dist > 0 && dist <= 5) {
+  } else if (dist => 0 && dist <= 5) {
+
     return (
       <View style={styles.legendTopFive}>
-        <Text style={styles.legendTopSubText}>
-          ฟ้าผ่าในระยะ {dist} กม.
-          <Noti />
+        <Text style={styles.legendTopSubText}> { dist === 0 
+        ? <Text>ฟ้าผ่าในระยะน้อยกว่า 1 กม.</Text>  
+        : <Text>ฟ้าผ่าในระยะ {dist} กม.</Text>}
         </Text>
       </View>
     );

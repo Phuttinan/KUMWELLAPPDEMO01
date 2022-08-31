@@ -12,6 +12,7 @@ function LightningMarker(props) {
     let fifteenMinCount = uTimeLightning + 900;
     let uTimeNow = (Date.now()/1000)    //console.log(unixTimestamp)
     //console.log(Date.now())
+    // console.log(uTimeLightning)
 
     if (dataLightnings.TYP === "1"){
       if (fiveMinCount > uTimeNow) {
