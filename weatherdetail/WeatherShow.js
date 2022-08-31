@@ -73,7 +73,7 @@ const WeatherShow = () => {
                             style={{ width: 60, height: 60 }}
                             
                         />
-                    <Text style={styles.title} > ความเร็วลมลม </Text>
+                    <Text style={styles.title} > ความเร็วลม </Text>
                     <Text style={styles.title}> 9 กม./ชม. </Text> 
                 </View>
                 <View style={styles.windd}>
@@ -95,7 +95,7 @@ const WeatherShow = () => {
                             style={{ width: 60, height: 60 }}
                             
                         />
-                    <Text style={styles.title} > ความเร็วลมลม </Text>
+                    <Text style={styles.title} > ความเร็วลม </Text>
                     <Text style={styles.title}> {Math.round(data.wind.speed)} กม./ชม. </Text> 
                 </View>
                 <View style={styles.windd}>
@@ -134,6 +134,7 @@ const WeatherShow = () => {
         borderRightWidth: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        
 
     },
     wind: {
@@ -142,6 +143,8 @@ const WeatherShow = () => {
         borderRightWidth: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        paddingLeft: 10,
+        paddingRight: 10,
     },
     windd: {
         flexGrow: 1,
@@ -149,7 +152,7 @@ const WeatherShow = () => {
         justifyContent: 'center',
     },
     winddeg: {
-        marginTop: 5,
+        marginTop: 3,
         paddingBottom: 10,
     },
     title: {

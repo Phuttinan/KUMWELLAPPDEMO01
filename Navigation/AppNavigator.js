@@ -23,8 +23,8 @@ import LightningAlarm from '../weatherdetail/LightningAlarm';
 function LogoTitle() {
     return (
       <Image
-        style={{ width: 150, height: 35 }}
-        source={require('../image/Demo.png')}
+        style={{ width: 170, height: 40 }}
+        source={require('../image/HeaderNavigatorNew.png')}
       />
     );
   }

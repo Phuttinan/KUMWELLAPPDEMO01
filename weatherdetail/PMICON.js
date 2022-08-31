@@ -67,41 +67,41 @@ const PMICON = () => {
                         {data.list[0].components.pm2_5 >= 0 && data.list[0].components.pm2_5 <= 50
                         ? <Image 
                             source={require('../image/pm2_5/pm1.png')}
-                            style={{ width: 80, height: 80 }} 
+                            style={{ width: 60, height: 60 }} 
                         />
                         : <View>
                             {data.list[0].components.pm2_5 >= 51 && data.list[0].components.pm2_5 <= 100
                             ? <Image 
                                 source={require('../image/pm2_5/pm2.png')}
-                                style={{ width: 80, height: 80 }} 
+                                style={{ width: 60, height: 60 }} 
                             />
                             : <View>
                                 {data.list[0].components.pm2_5 >= 101 && data.list[0].components.pm2_5 <= 150
                                 ? <Image 
                                     source={require('../image/pm2_5/pm3.png')}
-                                    style={{ width: 80, height: 80 }} 
+                                    style={{ width: 60, height: 60 }} 
                                 />
                                 : <View>
                                     {data.list[0].components.pm2_5 >= 151 && data.list[0].components.pm2_5 <= 200
                                     ? <Image 
                                         source={require('../image/pm2_5/pm4.png')}
-                                        style={{ width: 80, height: 80 }} 
+                                        style={{ width: 60, height: 60 }} 
                                     />
                                     : <View>
                                         {data.list[0].components.pm2_5 >= 201 && data.list[0].components.pm2_5 <= 300
                                         ? <Image 
                                             source={require('../image/pm2_5/pm5.png')}
-                                            style={{ width: 80, height: 80 }} 
+                                            style={{ width: 60, height: 60 }} 
                                         />
                                         : <View>
                                             {data.list[0].components.pm2_5 >= 301 && data.list[0].components.pm2_5 <= 500
                                             ? <Image 
                                                 source={require('../image/pm2_5/pm6.png')}
-                                                style={{ width: 80, height: 80 }} 
+                                                style={{ width: 60, height: 60 }} 
                                             />
                                             : <Image 
                                                 source={require('../image/pm2_5/pm6.png')}
-                                                style={{ width: 80, height: 80 }} 
+                                                style={{ width: 60, height: 60 }} 
                                             />
                                             }
                                         </View>

@@ -56,16 +56,16 @@ const WindDeg = () => {
     return(
         <View style={styles.warp}>
         {isLoading 
-        ? <View style={styles.winddeg}>
+        ? <View style={styles.winddegs}>
             <View style={styles.windd}>
                 <Image 
-                    source={require('../image/windeg/N.png')}
-                    style={{ width: 60, height: 60 }} 
+                    source={require('../image/windegnew/N.png')}
+                    style={{ width: 50, height: 50 }} 
                 /> 
             </View>
-            <View style={styles.detail}>
-                <Text style={styles.text}>      ทิศทางลม</Text>
-                <Text style={styles.text} >          360°  </Text>
+            <View style={styles.detail0}>
+                <Text style={styles.text}> ทิศทางลม</Text>
+                <Text style={styles.text} > 360°  </Text>
             </View>
         </View>
         : (
@@ -73,42 +73,42 @@ const WindDeg = () => {
                 <View style={styles.winddegs} >
                     <Text style={styles.detail}>{data.wind.deg > 337.5 && data.wind.deg <= 360 || data.wind.deg >= 0 && data.wind.deg <= 22.5
                         ? <Image 
-                            source={require('../image/windeg/N.png')}
-                            style={{ width: 60, height: 60 }} 
+                            source={require('../image/windegnew/N.png')}
+                            style={{ width: 50, height: 50 }} 
                             /> 
                         : <Text style={styles.detail}> {data.wind.deg > 22.5 && data.wind.deg <= 67.5
                             ? <Image 
-                                source={require('../image/windeg/NE.png')}
-                                style={{ width: 60, height: 60 }} 
+                                source={require('../image/windegnew/NE.png')}
+                                style={{ width: 50, height: 50 }} 
                             />
                             : <Text style={styles.detail}> {data.wind.deg > 67.5 && data.wind.deg <= 112.5
                                 ? <Image 
-                                    source={require('../image/windeg/E.png')}
-                                    style={{ width: 60, height: 60 }} 
+                                    source={require('../image/windegnew/E.png')}
+                                    style={{ width: 50, height: 50 }} 
                                 />
                                 : <Text style={styles.detail}> {data.wind.deg >112.5 && data.wind.deg <= 157.5
                                     ? <Image 
-                                        source={require('../image/windeg/SE.png')}
-                                        style={{ width: 60, height: 60 }} 
+                                        source={require('../image/windegnew/SE.png')}
+                                        style={{ width: 50, height: 50 }} 
                                     />
                                     : <Text style={styles.detail}> {data.wind.deg >157.5 && data.wind.deg <= 202.5
                                         ? <Image 
-                                            source={require('../image/windeg/S.png')}
-                                            style={{ width: 60, height: 60 }} 
+                                            source={require('../image/windegnew/S.png')}
+                                            style={{ width: 50, height: 50 }} 
                                         />
                                         : <Text style={styles.detail}> {data.wind.deg >202.5 && data.wind.deg <= 247.5
                                             ? <Image 
-                                                source={require('../image/windeg/SW.png')}
-                                                style={{ width: 60, height: 60 }} 
+                                                source={require('../image/windegnew/SW.png')}
+                                                style={{ width: 50, height: 50 }} 
                                             />
                                             : <Text style={styles.detail}> {data.wind.deg >247.5 && data.wind.deg <= 292.5
                                                 ? <Image 
-                                                    source={require('../image/windeg/W.png')}
-                                                    style={{ width: 60, height: 60 }} 
+                                                    source={require('../image/windegnew/W.png')}
+                                                    style={{ width: 50, height: 50 }} 
                                                 />
                                                 : <Image 
-                                                    source={require('../image/windeg/NW.png')}
-                                                    style={{ width: 60, height: 60 }} 
+                                                    source={require('../image/windegnew/NW.png')}
+                                                    style={{ width: 50, height: 50 }} 
                                                 />
                                             }
                                             </Text>
@@ -125,7 +125,7 @@ const WindDeg = () => {
                         </Text>
                     }</Text>
                 </View>
-                <View style={styles.detail}>
+                <View style={styles.detail1}>
                     <Text style={styles.text}>ทิศทางลม</Text>
                     <Text style={styles.text} >      {data.wind.deg}°  </Text>
                 </View>
@@ -136,12 +136,19 @@ const WindDeg = () => {
 }
 const styles = StyleSheet.create({
     winddegs: {
-        marginBottom: 15
+        // marginBottom: 15
         
     },
     detail: {
         marginBottom: 10,
         paddingBottom: 10,
+    },
+    detail1: {
+        marginTop: 2,
+    },
+    detail0: {
+        alignItems: "center",
+        justifyContent: "center",
     }
   })
 export default WindDeg;

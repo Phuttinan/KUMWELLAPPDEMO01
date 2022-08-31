@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View,Image} from 'react-native';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Location from 'expo-location';
 import PMICON from './PMICON';
@@ -65,8 +65,14 @@ const PM25 = () => {
         : (
             <View style={styles.PM25}>
                 <View style={styles.PM25details}>
+                    {/* <Image 
+                        source={require('../image/weather/PM2_5.png')}
+                        style={{ width: 60, height: 60 }} 
+                    />  */}
+                    
                     <PMICON />
-                    <Text style={styles.pm25text}> {Math.round(data.list[0].components.pm2_5)}</Text>
+                    <Text style={styles.PMtext}>PM 2.5</Text>
+                    <Text style={styles.pm25text}> : {Math.round(data.list[0].components.pm2_5)}</Text>
                     <Text style={styles.pm25text2}>   ไมครอน</Text>
                 </View> 
             </View>  
@@ -84,6 +90,10 @@ const styles = StyleSheet.create({
         
 
     },
+    PMtext: {
+        fontSize: 20,
+        fontWeight: '10'
+    },
     PM25: {
         flex: 1,
         backgroundColor: '#fff',
@@ -100,7 +110,7 @@ const styles = StyleSheet.create({
 
     },
     pm25text: {
-        fontSize: 20,
+        fontSize: 18,
         fontWeight: '10',
     },
     pm25text2: {

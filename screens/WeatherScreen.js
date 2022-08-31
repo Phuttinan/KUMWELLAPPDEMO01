@@ -20,7 +20,7 @@ const WeatherScreen = ({navigation}) => {
     const [refreshing, setRefreshing] = React.useState(false);
     const onRefresh = React.useCallback(() => {
     setRefreshing(true);
-    wait(1000).then(() => setRefreshing(DevSettings.reload()));
+    wait(2000).then(() => setRefreshing(DevSettings.reload()));
     }, []);
 
     return(

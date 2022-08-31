@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, View, Text,StyleSheet, ScrollView } from 'react-native';
+import { Button, View, Text,StyleSheet, ScrollView,Image } from 'react-native';
 
 
 const InformationScreen = ({navigation}) => {
@@ -18,12 +18,12 @@ const InformationScreen = ({navigation}) => {
         </Text>
       </View>
       <View style={styles.details2}>
-        <Text style={styles.textheader}>2. All เลือกเปิด (on) สามารถแสดงผลข้อมูลฟ้าผ่า Clound to clound, clound to Ground</Text>
+        <Text style={styles.textheader}>2. All เลือกเปิด (on) สามารถแสดงผลข้อมูลฟ้าผ่าในรูปแบบ <Image source={require('../image/lightning_icon/K_ICON_CCO.png')} style={{ width: 20, height: 20 }} /> Clound to Clound,  <Image source={require('../image/lightning_icon/K_ICON_CO.png')} style={{ width: 20, height: 20 }} /> Clound to Ground</Text>
         <Text style={styles.textdetails}>
-           - Cound to Cound เลือกเปิด สามารถแสดงผลข้อมูลเฉพาะฟ้าผ่า Clound to Clound
+           - <Image source={require('../image/lightning_icon/K_ICON_CCO.png')} style={{ width: 20, height: 20 }}/> Cound to Cound เลือกเปิด สามารถแสดงผลข้อมูลเฉพาะฟ้าผ่า Clound to Clound
         </Text>
         <Text style={styles.textdetails}>
-           - Cound to Ground เลือกเปิด สามารถแสดงผลข้อมูลเฉพาะฟ้าผ่า Clound to Ground
+           - <Image source={require('../image/lightning_icon/K_ICON_CO.png')} style={{ width: 20, height: 20 }} /> Cound to Ground เลือกเปิด สามารถแสดงผลข้อมูลเฉพาะฟ้าผ่า Clound to Ground
         </Text>
       </View>
       <View style={styles.details3}>
