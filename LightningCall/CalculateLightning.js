@@ -45,6 +45,7 @@ const LightningCalculate = (props) => {
     return (
       <View style={styles.legendTop}>
         <Text style={styles.legendTopSubText}>ฟ้าผ่าในระยะ {dist} กม.</Text>
+        <Noti />
       </View>
     );
   } else if (dist > 5 && dist <= 10) {
@@ -58,7 +59,7 @@ const LightningCalculate = (props) => {
   } else if (dist => 0 && dist <= 5) {
 
     return (
-      <View style={styles.legendTopFive}>
+      <View style={styles.legendTopFive}> 
         <Text style={styles.legendTopSubText}> { dist === 0 
         ? <Text>ฟ้าผ่าในระยะน้อยกว่า 1 กม.</Text>  
         : <Text>ฟ้าผ่าในระยะ {dist} กม.</Text>}

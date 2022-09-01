@@ -4,6 +4,8 @@ import * as Notifications from "expo-notifications"
 import * as Permissions from "expo-permissions"
 import Constants from 'expo-constants';
 
+
+
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
     shouldShowAlert: true,
@@ -26,6 +28,7 @@ const Noti = () => {
     },
     trigger: { seconds: 1 },
     })
+
 
 //     return (
 //     <View style={styles.container}>
