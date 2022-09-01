@@ -11,8 +11,6 @@ const LightningCalculate = (props) => {
   const [dist, setDist] = useState(0);
   const [state, setState] = useState(0);
 
-  // console.log(dataLightnings)
-
   useEffect(() => {
     var item = [];
     for (let i = 0; i < dataLightnings.length; i++) {
@@ -29,19 +27,41 @@ const LightningCalculate = (props) => {
     }
     
     setDist(parseInt(Math.min(...item)));
+    //setDist(6);
+    //console.log(item)
+
+    // if (dist > 10) {
+    //   console.log("notification in five condition", dist)
+    // } else if (dist > 5 && dist <= 10) {
+    //   Noti();
+    //   console.log("else condition", dist)
+    // } else if (dist => 0 && dist <= 5) {
+    //   Noti();
+    //   console.log("else condition 111", dist)
+    // }
     // setDist(6);
-    // console.log(item);
-    // console.log(dist);
-    // console.log(
-    //   "Nearest lightning is",
-    //   parseInt(Math.min(...item)),
-    //   "kilometers."
-    // );
+
+    // if (dist != 0){
+    //   if (dist > 0 && dist <= 5) {
+    //     Noti();
+    //     console.log("Use effect2", dist)
+    //   }else if (dist > 5 && dist <= 10){
+    //     Noti();
+    //     console.log("else condition", dist)
+    //   }else if (dist > 10){
+    //     console.log("notification in five condition", dist)
+    //   }else if (dist == 0){
+    //     console.log("notification else")
+    //   }
+    // }else{
+    //   console.log("else 111", dist)
+    //   setDist(6);
+    //   //setDist(parseInt(Math.min(...item)));
+    // }
   }, []);
 
-    
-  // console.log(state);
   if (dist > 10) {
+    console.log("dist", dist)
     return (
       <View style={styles.legendTop}>
         <Text style={styles.legendTopSubText}>ฟ้าผ่าในระยะ {dist} กม.</Text>
@@ -51,8 +71,8 @@ const LightningCalculate = (props) => {
     return (
       <View style={styles.legendTopTen}>
         <Text style={styles.legendTopSubText}>
-          ฟ้าผ่าในระยะ {dist} กม. 
-        </Text>
+          ฟ้าผ่าในระยะ {dist} กม.
+          </Text>
       </View>
     );
   } else if (dist => 0 && dist <= 5) {
@@ -100,7 +120,7 @@ const styles = StyleSheet.create({
     top: 10,
     width: 200,
     borderRadius: 10,
-    backgroundColor: "rgba(241, 142, 35, 0.8)",
+    backgroundColor: "rgba(255, 216, 1, 0.8)",
     opacity: 1,
     alignItems: "center",
     justifyContent: "center",
@@ -114,7 +134,7 @@ const styles = StyleSheet.create({
     top: 10,
     width: 200,
     borderRadius: 10,
-    backgroundColor: "rgba(52, 124, 23, 0.8)",
+    backgroundColor: "rgba(51, 204, 0, 0.8)",
     opacity: 1,
     alignItems: "center",
     justifyContent: "center",

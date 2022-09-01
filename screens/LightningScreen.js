@@ -3,7 +3,6 @@ import { Platform, Text, View, StyleSheet, ActivityIndicator, Dimensions, Image,
 import * as Location from 'expo-location';
 import MapView, { Marker, Circle } from 'react-native-maps';
 import LightningMarker from '../LightningCall/MarkerLightning';
-
 import LightningCalculate from '../LightningCall/CalculateLightning';
 
 const LocationMap = () => {
@@ -84,7 +83,7 @@ const LocationMap = () => {
                             longitude: location.coords.longitude }}
                         radius={10000} 
                         strokeWidth={2}
-                        strokeColor={'rgba(0, 0, 0, 0.5)'} 
+                        strokeColor={'rgba(255, 0, 0, 0.5)'} 
                         fillColor={'rgba(255, 0, 0, 0.1)'}
                         />
                         <Circle
@@ -93,7 +92,7 @@ const LocationMap = () => {
                             longitude: location.coords.longitude }} 
                         radius={5000} 
                         strokeWidth={2}
-                        strokeColor={'rgba(0, 0, 0, 0.5)'}
+                        strokeColor={'rgba(255, 0, 0, 0.5)'}
                         fillColor={'rgba(255, 0, 0, 0.1)'}
                         />
                     </MapView>
@@ -218,7 +217,7 @@ const styles = StyleSheet.create({
       width: 110,
       backgroundColor: "white",
       opacity: 0.9,
-      borderRadius: 20
+      borderRadius: 15
 
   },
   legendContainer0: {
