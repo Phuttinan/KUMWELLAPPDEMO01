@@ -69,14 +69,14 @@ const PM25 = () => {
         : (
             <View style={styles.PM25}>
                 <View style={styles.PM25details}>
-                    <Image 
+                    {/* <Image 
                         source={require('../image/pm2_5/pm2.png')}
                         style={{ width: 60, height: 60 }} 
-                    /> 
+                    />*/} 
                     
-                    {/* <PMICON /> */}
+                    <PMICON /> 
                     <Text style={styles.PMtext}>PM 2.5</Text>
-                    <Text style={styles.pm25text}> : 60 </Text>
+                    <Text style={styles.pm25text}> : {Math.round(data.list[0].components.pm2_5)}</Text>
                     <Text style={styles.pm25text2}>   ไมครอน</Text>
                 </View> 
             </View>  

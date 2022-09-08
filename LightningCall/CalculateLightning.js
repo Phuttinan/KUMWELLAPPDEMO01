@@ -61,7 +61,6 @@ const LightningCalculate = (props) => {
   }, []);
 
   if (dist > 10) {
-    console.log("dist", dist)
     return (
       <View style={styles.legendTop}>
         <Text style={styles.legendTopSubText}>ฟ้าผ่าในระยะ {dist} กม.</Text>
@@ -76,7 +75,6 @@ const LightningCalculate = (props) => {
       </View>
     );
   } else if (dist => 0 && dist <= 5) {
-
     return (
       <View style={styles.legendTopFive}>
         <Text style={styles.legendTopSubText}> { dist === 0 
@@ -141,6 +139,7 @@ const styles = StyleSheet.create({
   },
   legendTopSubText: {
     fontWeight: "bold",
+    color:"white",
     fontSize: 15,
     fontStyle: "normal",
   },

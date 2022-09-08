@@ -18,12 +18,12 @@ const InformationScreen = ({navigation}) => {
         </Text>
       </View>
       <View style={styles.details2}>
-        <Text style={styles.textheader}>2. All เลือกเปิด (on) สามารถแสดงผลข้อมูลฟ้าผ่าในรูปแบบ <Image source={require('../image/lightning_icon/K_ICON_CCO.png')} style={{ width: 20, height: 20 }} /> Clound to Clound,  <Image source={require('../image/lightning_icon/K_ICON_CO.png')} style={{ width: 20, height: 20 }} /> Clound to Ground</Text>
+        <Text style={styles.textheader}>2. All เลือกเปิด (on) สามารถแสดงผลข้อมูลฟ้าผ่าในรูปแบบ <Image source={require('../image/lightning_icon/K_ICON_CCO.png')} style={{ width: 20, height: 20 }} /> Cloud to Cloud,  <Image source={require('../image/lightning_icon/K_ICON_CO.png')} style={{ width: 20, height: 20 }} /> Cloud to Ground</Text>
         <Text style={styles.textdetails}>
-           - <Image source={require('../image/lightning_icon/K_ICON_CCO.png')} style={{ width: 20, height: 20 }}/> Cound to Cound เลือกเปิด สามารถแสดงผลข้อมูลเฉพาะฟ้าผ่า Clound to Clound
+           - <Image source={require('../image/lightning_icon/K_ICON_CCO.png')} style={{ width: 20, height: 20 }}/> Cloud to Cloud เลือกเปิด สามารถแสดงผลข้อมูลเฉพาะฟ้าผ่า Cloud to Cloud
         </Text>
         <Text style={styles.textdetails}>
-           - <Image source={require('../image/lightning_icon/K_ICON_CO.png')} style={{ width: 20, height: 20 }} /> Cound to Ground เลือกเปิด สามารถแสดงผลข้อมูลเฉพาะฟ้าผ่า Clound to Ground
+           - <Image source={require('../image/lightning_icon/K_ICON_CO.png')} style={{ width: 20, height: 20 }} /> Cloud to Ground เลือกเปิด สามารถแสดงผลข้อมูลเฉพาะฟ้าผ่า Cloud to Ground
         </Text>
       </View>
       <View style={styles.details3}>
