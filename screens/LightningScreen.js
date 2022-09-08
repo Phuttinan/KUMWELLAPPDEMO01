@@ -1,38 +1,40 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Platform, Text, View, StyleSheet, ActivityIndicator, Dimensions, Image, Alert, Linking } from 'react-native';
 import * as Location from 'expo-location';
 import MapView, { Marker, Circle } from 'react-native-maps';
 import LightningMarker from '../LightningCall/MarkerLightning';
 import LightningCalculate from '../LightningCall/CalculateLightning';
+import { LocationsContext } from '../contexts/LocationsContext';
 
 const LocationMap = () => {
-    const [location, setLocation] = useState(null);
-    const [errorMsg, setErrorMsg] = useState(null);
-    const [loading, setLoading] = useState([]);
-    let [data, setData] = useState([])
+    const { location, loading } = useContext(LocationsContext);
+    //const [location, setLocation] = useState(null);
+    //const [errorMsg, setErrorMsg] = useState(null);
+    //const [loading, setLoading] = useState([]);
+    let [data, setData] = useState([]);
     let host = (Platform.OS == 'android') ? '58.97.57.113' : 'localhost'
 
-    useEffect(() => {
-      (async () => {
-        let { status } = await Location.requestForegroundPermissionsAsync();
-        if (status !== 'granted') {
-          Alert.alert(
-            'Permission to access location was denied',
-            'go to setting',
-            [
-              {text: 'setting', onPress: () => {Linking.openSettings()}},
-              {text: 'close', onPress: () => {}}
-            ]
-          );
-          return;
-        }
+    // useEffect(() => {
+    //   (async () => {
+    //     let { status } = await Location.requestForegroundPermissionsAsync();
+    //     if (status !== 'granted') {
+    //       Alert.alert(
+    //         'Permission to access location was denied',
+    //         'go to setting',
+    //         [
+    //           {text: 'setting', onPress: () => {Linking.openSettings()}},
+    //           {text: 'close', onPress: () => {}}
+    //         ]
+    //       );
+    //       return;
+    //     }
         
-        let location = await Location.getCurrentPositionAsync({});
-        setLocation(location);
-        setLoading(false);
+    //     let location = await Location.getCurrentPositionAsync({});
+    //     setLocation(location);
+    //     setLoading(false);
   
-      })();
-    }, []);
+    //   })();
+    // }, []);
 
     useEffect(() => { //
       fetch(`http://${host}/LLSApp/jgetlast1hr.php`)

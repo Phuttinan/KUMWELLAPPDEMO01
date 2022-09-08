@@ -26,8 +26,6 @@ const Noti = () => {
     },
     trigger: { seconds: 1 },
     })
-<<<<<<< HEAD
-=======
 
 
 //     return (
@@ -35,7 +33,6 @@ const Noti = () => {
 //       <Text>Hi, I am notification.</Text>
 //     </View>
 //   )
->>>>>>> bd20574a92f9e3f2f622f44d2c7a59defd94d2b2
 }
 
 export default Noti;
