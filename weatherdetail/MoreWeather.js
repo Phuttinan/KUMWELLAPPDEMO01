@@ -66,7 +66,6 @@ const MoreWeather = () => {
         let secTimer = setInterval(() => {
         setDt(new Date().toLocaleString())
         }, 1000)
-
         return () => clearInterval(secTimer);
     }, []);
     
