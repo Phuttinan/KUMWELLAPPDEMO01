@@ -36,7 +36,7 @@ const LocationMap = () => {
     //   })();
     // }, []);
 
-    useEffect(() => { //
+    useEffect(() => { 
       fetch(`http://${host}/LLSApp/jgetlast1hr.php`)
             .then(response => response.json())
             .then(result => setData(result))
@@ -58,6 +58,9 @@ const LocationMap = () => {
       return <LightningCalculate dataLightnings={data} />;
     };
 
+    let newLat = location.coords.latitude + 0.045
+    let newLat1 = location.coords.latitude + 0.090
+
     return (
         <View style={styles.containerMap}>
             {loading ? <ActivityIndicator size="large" /> : (
@@ -78,11 +81,19 @@ const LocationMap = () => {
                         rotateEnabled={false}
                         >
                         {lightningElement}
-                        
+                        <Marker 
+                          coordinate={{latitude: newLat, 
+                          longitude: location.coords.longitude}}
+                          icon={require('../assets/5.png')}>
+                        </Marker>
+                        <Marker coordinate={{latitude: newLat1, 
+                          longitude: location.coords.longitude}}
+                          icon={require('../assets/10.png')}>
+                        </Marker>
                         <Circle 
                         center={{ 
-                            latitude: location.coords.latitude,
-                            longitude: location.coords.longitude }}
+                          latitude: location.coords.latitude,
+                          longitude: location.coords.longitude }}
                         radius={10000} 
                         strokeWidth={2}
                         strokeColor={'rgba(255, 0, 0, 0.5)'} 
@@ -90,8 +101,8 @@ const LocationMap = () => {
                         />
                         <Circle
                         center={{ 
-                            latitude: location.coords.latitude,
-                            longitude: location.coords.longitude }} 
+                          latitude: location.coords.latitude,
+                          longitude: location.coords.longitude }} 
                         radius={5000} 
                         strokeWidth={2}
                         strokeColor={'rgba(255, 0, 0, 0.5)'}
