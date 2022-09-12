@@ -53,7 +53,7 @@ const WeatherScreen = ({navigation}) => {
                 </View>
                 
                 <View>
-                    <Text style={{height: 300}}></Text>
+                    <Text style={{height: 100}}></Text>
                 </View>
                 
             </ScrollView>

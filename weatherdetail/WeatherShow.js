@@ -122,7 +122,7 @@ const WeatherShow = () => {
         flex: 1,
         flexDirection: 'row',
         backgroundColor: '#fff',
-        padding: 30,
+        padding: 20,
         borderRadius: 30,
         borderBottomColor: '#D3D3D3',
         borderBottomWidth: 3, 
@@ -134,6 +134,7 @@ const WeatherShow = () => {
         borderRightWidth: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        paddingRight: 10,
         
 
     },
@@ -154,6 +155,7 @@ const WeatherShow = () => {
     winddeg: {
         marginTop: 3,
         paddingBottom: 10,
+        paddingLeft: 10,
     },
     title: {
         fontSize: 15,

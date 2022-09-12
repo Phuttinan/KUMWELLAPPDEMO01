@@ -116,8 +116,8 @@ const MoreWeather = () => {
     weather:{
 
         backgroundColor: '#fff',
-        paddingTop: 20,
-        paddingBottom: 30,
+        paddingTop: 10,
+        paddingBottom: 20,
         borderRadius: 30,
         alignItems: 'center',
         borderBottomColor: '#D3D3D3',

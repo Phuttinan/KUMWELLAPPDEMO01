@@ -24,10 +24,11 @@ const LightningCalculate = (props) => {
         }
       );
       item.push(dis / 1000);
+      
     }
     
     setDist(parseInt(Math.min(...item)));
-    //setDist(6);
+    // setDist(5);
     //console.log(item)
 
     // if (dist > 10) {
@@ -64,7 +65,6 @@ const LightningCalculate = (props) => {
     return (
       <View style={styles.legendTop}>
         <Text style={styles.legendTopSubText}>ฟ้าผ่าในระยะ {dist} กม.</Text>
-        {/* <Noti /> */}
       </View>
     );
   } else if (dist > 5 && dist <= 10) {
@@ -98,45 +98,31 @@ const styles = StyleSheet.create({
   },
   legendTopFive: {
     position: "absolute",
-    flexDirection: "row",
-    resizeMode: "cover",
     left: 10,
-    height: 50,
     top: 10,
-    width: 200,
+    padding: 10,
     borderRadius: 10,
     backgroundColor: "rgba(237, 28, 36, 0.8)",
     opacity: 1,
-    alignItems: "center",
-    justifyContent: "center",
   },
   legendTopTen: {
     position: "absolute",
-    flexDirection: "row",
-    resizeMode: "cover",
     left: 10,
-    height: 50,
     top: 10,
-    width: 200,
+    padding: 10,
     borderRadius: 10,
     backgroundColor: "rgba(255, 216, 1, 0.8)",
     opacity: 1,
-    alignItems: "center",
-    justifyContent: "center",
   },
   legendTop: {
+    flex: 1,
     position: "absolute",
-    flexDirection: "row",
-    resizeMode: "cover",
     left: 10,
-    height: 50,
     top: 10,
-    width: 200,
+    padding: 10,
     borderRadius: 10,
     backgroundColor: "rgba(51, 204, 0, 0.8)",
     opacity: 1,
-    alignItems: "center",
-    justifyContent: "center",
   },
   legendTopSubText: {
     fontWeight: "bold",

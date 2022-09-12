@@ -64,7 +64,7 @@ const LocationMap = () => {
     return (
         <View style={styles.containerMap}>
             {loading ? <ActivityIndicator size="large" /> : (
-                <View>
+                <View >
                     <MapView 
                         style={styles.map} 
                         initialRegion={{
@@ -113,33 +113,28 @@ const LocationMap = () => {
                 </View>
             )}
 
-            <View style={styles.legendContainer}>
-              <View style={styles.legendContainer0}>
-                <Text style={styles.legendText0}> ห้วงเวลาเกิดฟ้าผ่า </Text>
-                <Text style={styles.legendText}> 
-                  <Image 
+            <View style={styles.box}>
+              <View style={styles.boxdetail}>
+                <Text style={styles.boxtitle}> ห้วงเวลาเกิดฟ้าผ่า </Text>
+                <Text style={styles.boxtext1}>
+                <Image 
                     source={require('../image/lightning_icon/K_ICON_CR.png') } 
-                    style={styles.legend} 
-                    resizeMode='contain' 
+                    style={{ width: 23, height: 23 }}
                   /> {'> 0-5 นาที'}
                 </Text>
             
-            <Text style={styles.legendText2}>
+            <Text style={styles.boxtext2}>
             <Image 
               source={require('../image/lightning_icon/K_ICON_CO.png') } 
-              style={styles.legend} 
-              resizeMode='contain' 
-            /> 
-            {'> 5-10 นาที'}
+              style={{ width: 23, height: 23 }} 
+            /> {'> 5-10 นาที'} 
             </Text>
 
-            <Text style={styles.legendText3}>
+            <Text style={styles.boxtext3}>
             <Image 
               source={require('../image/lightning_icon/K_ICON_CY.png') } 
-              style={styles.legend} 
-              resizeMode='contain' 
-            /> 
-            {'> 10-15 นาที'}
+              style={{ width: 23, height: 23 }} 
+            /> {'> 10-15 นาที'}
             </Text>
             </View>
             </View>
@@ -159,6 +154,30 @@ const loca = {
 };
 
 const styles = StyleSheet.create({
+  box: {
+    position: 'absolute',
+    bottom: 30,
+    left: 5,
+  },
+  boxdetail: {
+    backgroundColor: '#fff',
+    opacity: 0.8,
+    padding: 10,
+    borderRadius: 10,
+  },
+  boxtitle: {
+    fontSize: 15,
+    fontWeight: 'bold',
+  },
+  boxtext1: {
+    fontSize: 12,
+  },
+  boxtext2: {
+    fontSize: 12,
+  },
+  boxtext3: {
+    fontSize: 12,
+  },
   legendTop: {
     position: 'absolute',
     flexDirection: 'row',
@@ -221,82 +240,6 @@ const styles = StyleSheet.create({
   markerImage: {
       width: 35,
       height: 35
-  },
-  legendContainer: {
-      position: 'absolute',
-      left: 10,
-      bottom: 35,
-      height: 110,
-      width: 110,
-      backgroundColor: "white",
-      opacity: 0.9,
-      borderRadius: 15
-
-  },
-  legendContainer0: {
-    padding: 10,
-
-    
-},
-  legend: {
-      height: 23,
-      width: 23,
-      flexDirection: 'row',
-      resizeMode: 'cover'
-  },
-  legendText0: {
-    position: 'absolute', 
-    fontSize: 10,
-    left: 10,
-    top: 10,
-    fontWeight: "bold",
-    flexDirection: 'row',
-    resizeMode: 'cover',
-
-},
-  legendText: {
-      position: 'absolute', 
-      fontSize: 10,
-      left: 20,
-      top: 25,
-      fontWeight: "bold",
-      flexDirection: 'row',
-      resizeMode: 'cover'
-  },
-  legendText2: {
-      position: 'absolute', 
-      fontSize: 10,
-      left: 20,
-      top: 45,
-      fontWeight: "bold",
-  },
-  legendText3: {
-      position: 'absolute', 
-      fontSize: 10,
-      left: 20,
-      top: 65,
-      fontWeight: "bold",
-  },
-  legendText4: {
-      position: 'absolute', 
-      fontSize: 10,
-      left: 25,
-      top: 72,
-      fontWeight: "bold",
-  },
-  legendText5: {
-    position: 'absolute', 
-    fontSize: 10,
-    left: 25,
-    top: 95,
-    fontWeight: "bold",
-  },
-  legendText6: {
-    position: 'absolute', 
-    fontSize: 10,
-    left: 25,
-    top: 120,
-    fontWeight: "bold",
   }
 })
 

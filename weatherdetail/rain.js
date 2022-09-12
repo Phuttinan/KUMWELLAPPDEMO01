@@ -60,52 +60,60 @@ const Rain = () => {
         <View style={styles.wrap} >
         {isLoading 
         ? <View style={styles.rain}>
-            <View style={styles.humid} >
-                    <Text>
-                        <Humidity />
-                    </Text>
+           <View style={styles.humid} >
+                    <Image
+                        source={require('../image/weather/Humidity.png')}
+                        style={{ width: 50, height: 50 }}
+                            
+                    />
+                    <Text style={styles.humiditydetails}> ความชื้นสัมพัทธ์ </Text> 
+                    <Text style={styles.humiditydetails}> 63 %</Text>
                 </View>
                 <View style={styles.rainy}>
                     <Image
                             source={require('../image/weather/Rainper.png')}
-                            style={{ width: 60, height: 60 }}
+                            style={{ width: 50, height: 50 }}
                             
                     />
-                    <Text style={styles.raindetails}>  เปอร์เซ็นต์ฝนตก :  36 %</Text>  
+                    <Text style={styles.raindetails}> เปอร์เซ็นต์ฝนตก</Text> 
+                    <Text style={styles.raindetails}> 34 %</Text>  
                 </View>
                 <View style={styles.rainvalu}>
                     <Image
                             source={require('../image/weather/Nice_today.png')}
-                            style={{ width: 60, height: 60,marginTop: 5 }}
-                            
+                            style={{ width: 50, height: 50 }}            
                     />
-                    <Text style={styles.rainvaludetails}> ปริมาณน้ำฝนในช่วง 3 ชั่วโมงที่ผ่านมา  </Text> 
-                    <Text style={styles.rainvaludetails1}> 4 มม. </Text> 
+                    <Text style={styles.rainvaludetails}> ปริมาณน้ำฝน </Text> 
+                    <Text style={styles.rainvaludetails}> 3 ชม. : 4 มม. </Text>
                 </View>
         </View> 
         : (
            <View style={styles.rain}>
                 <View style={styles.humid} >
-                    <Text>
-                        <Humidity />
-                    </Text>
+                    <Image
+                        source={require('../image/weather/Humidity.png')}
+                        style={{ width: 50, height: 50 }}
+                            
+                    />
+                    <Text style={styles.humiditydetails}> ความชื้นสัมพัทธ์ </Text> 
+                    <Text style={styles.humiditydetails}> {Math.round(data.list[0].main.humidity)} %</Text>
                 </View>
                 <View style={styles.rainy}>
                     <Image
                             source={require('../image/weather/Rainper.png')}
-                            style={{ width: 60, height: 60 }}
+                            style={{ width: 50, height: 50 }}
                             
                     />
-                    <Text style={styles.raindetails}>  เปอร์เซ็นต์ฝนตก :  {Math.round(data.list[0].pop * 100)} %</Text>  
+                    <Text style={styles.raindetails}> เปอร์เซ็นต์ฝนตก</Text> 
+                    <Text style={styles.raindetails}> {Math.round(data.list[0].pop * 100)} %</Text>  
                 </View>
                 <View style={styles.rainvalu}>
                     <Image
                             source={require('../image/weather/Nice_today.png')}
-                            style={{ width: 60, height: 60,marginTop: 5 }}
-                            
+                            style={{ width: 50, height: 50 }}            
                     />
-                    <Text style={styles.rainvaludetails}> ปริมาณน้ำฝนในช่วง 3 ชั่วโมงที่ผ่านมา  </Text> 
-                    <Text style={styles.rainvaludetails1}> 4 มม. </Text> 
+                    <Text style={styles.rainvaludetails}> ปริมาณน้ำฝน </Text> 
+                    <Text style={styles.rainvaludetails}> 3 ชม. : 4 มม. </Text>
                 </View>
            </View> 
         )}
@@ -125,35 +133,40 @@ const styles = StyleSheet.create({
     },
     rain: {
         flex: 1,
-        flexDirection: 'column',
+        flexDirection: 'row',
         backgroundColor: '#fff',
-        padding: 30,
+        padding: 25,
         borderRadius: 30,
         borderBottomColor: '#D3D3D3',
-        borderBottomWidth: 3,
-
-        
+        borderBottomWidth: 3, 
+        flexWrap: 'wrap'
+    },
+    humid: {
+        flexGrow: 1,
+        borderRightColor: '#D3D3D3',
+        borderRightWidth: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingRight: 5,
     },
     rainy: {
         flexGrow: 1,
+        borderRightColor: '#D3D3D3',
+        borderRightWidth: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        marginBottom: 15,
+        paddingRight: 5,
+        paddingLeft: 5,
 
     },
     rainvalu: {
         flexGrow: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        borderTopColor: '#D3D3D3',
-        borderTopWidth: 1,
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
+        paddingLeft: 5,
         
-        
-
     },
-    rainvaludetails1: {
+    humiditydetails: {
         fontSize: 15,
         fontWeight: '10',
         marginTop: 5,
@@ -161,23 +174,15 @@ const styles = StyleSheet.create({
     raindetails: {
         fontSize: 15,
         fontWeight: '10',
+        marginTop: 5,
 
     },
     rainvaludetails: {
         fontSize: 15,
         fontWeight: '10',
-
+        marginTop: 5,
     },
-    humid: {
-        flexGrow: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginBottom: 15,
-        borderBottomColor: '#D3D3D3',
-        borderBottomWidth: 1,
-        borderBottomLeftRadius: 30,
-        borderBottomRightRadius: 30,
-    }
+
 
 });
 
