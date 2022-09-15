@@ -28,7 +28,7 @@ const LightningCalculate = (props) => {
     }
     
     setDist(parseInt(Math.min(...item)));
-    // setDist(5);
+    // setDist(6);
     //console.log(item)
 
     // if (dist > 10) {
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     top: 10,
     padding: 10,
     borderRadius: 10,
-    backgroundColor: "rgba(255, 216, 1, 0.8)",
+    backgroundColor: "rgba(255, 140, 0,0.8)",
     opacity: 1,
   },
   legendTop: {
