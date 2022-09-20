@@ -10,12 +10,20 @@ const LightningCalculate = (props) => {
   const { dataLightnings } = props;
   const [dist, setDist] = useState(0);
   const [state, setState] = useState(0);
+  const [notify, setNotify] = useState([]);
+  var item = [];
+  var itemTimes = [];
 
   useEffect(() => {
-    var item = [];
+    
     for (let i = 0; i < dataLightnings.length; i++) {
       let lat = parseFloat(dataLightnings[i].LAT);
       let lon = parseFloat(dataLightnings[i].LON);
+      let dateLightnings = new Date(dataLightnings[i].DAT);
+      let uTimeLightning = Math.floor(dateLightnings.getTime()/1000);
+      let fifteenMinCount = uTimeLightning + 900;
+      let uTimeNow = (Date.now()/1000);
+      //let uTimeFifteen = ((Date.now()/1000)-900);
       let dis = getDistance(
         { latitude: lat, longitude: lon },
         {
@@ -23,44 +31,23 @@ const LightningCalculate = (props) => {
           longitude: location.coords.longitude,
         }
       );
-      item.push(dis / 1000);
+      if (dataLightnings[i].TYP === "1" && fifteenMinCount > uTimeNow){
+        item.push(dis / 1000);
+        itemTimes.push(dateLightnings);
+      }
       
     }
     
     setDist(parseInt(Math.min(...item)));
-    // setDist(6);
-    //console.log(item)
-
-    // if (dist > 10) {
-    //   console.log("notification in five condition", dist)
-    // } else if (dist > 5 && dist <= 10) {
-    //   Noti();
-    //   console.log("else condition", dist)
-    // } else if (dist => 0 && dist <= 5) {
-    //   Noti();
-    //   console.log("else condition 111", dist)
-    // }
-    // setDist(6);
-
-    // if (dist != 0){
-    //   if (dist > 0 && dist <= 5) {
-    //     Noti();
-    //     console.log("Use effect2", dist)
-    //   }else if (dist > 5 && dist <= 10){
-    //     Noti();
-    //     console.log("else condition", dist)
-    //   }else if (dist > 10){
-    //     console.log("notification in five condition", dist)
-    //   }else if (dist == 0){
-    //     console.log("notification else")
-    //   }
-    // }else{
-    //   console.log("else 111", dist)
-    //   setDist(6);
-    //   //setDist(parseInt(Math.min(...item)));
-    // }
+    //setNotify(itemTimes[item.indexOf(Math.min(...item))])
+    //setDist(11);
+    //console.log(item.indexOf(Math.min(...item)));
+    //console.log(itemTimes[item.indexOf(Math.min(...item))]);
+    console.log(item);
   }, []);
 
+  console.log(dist);
+  //console.log(notify)
   if (dist > 10) {
     return (
       <View style={styles.legendTop}>
@@ -127,7 +114,7 @@ const styles = StyleSheet.create({
   legendTopSubText: {
     fontWeight: "bold",
     color:"white",
-    fontSize: 12,
+    fontSize: 14,
     fontStyle: "normal",
   },
   lightningFive: {

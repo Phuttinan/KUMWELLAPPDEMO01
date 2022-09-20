@@ -33,7 +33,7 @@ function LocationsContextProvider(props) {
         getLoca()
         let secTimer = setInterval(() => {
             getLoca()
-            }, 5000)
+            }, 30000)
             return () => clearInterval(secTimer);
         }, []);
     
