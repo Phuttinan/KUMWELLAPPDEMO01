@@ -85,8 +85,8 @@ const RainValu = () => {
             source={require("../image/weather/UV.png")}
             style={{ width: 60, height: 60 }}
           />
-          <Text style={{ fontSize: 15, fontWeight: "10" }}>ดัชนี UV</Text>
-          <Text style={{ fontSize: 15, fontWeight: "10" }}>
+          <Text style={{ fontSize: 12 }}>ดัชนี UV</Text>
+          <Text style={{ fontSize: 12}}>
             {data.current.uv}
           </Text>
         </View>

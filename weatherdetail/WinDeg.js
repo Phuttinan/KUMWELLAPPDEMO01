@@ -149,6 +149,9 @@ const styles = StyleSheet.create({
     detail0: {
         alignItems: "center",
         justifyContent: "center",
+    },
+    text: {
+        fontSize: 12,
     }
   })
 export default WindDeg;

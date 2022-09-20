@@ -119,21 +119,21 @@ const LocationMap = () => {
                 <Text style={styles.boxtext1}>
                 <Image 
                     source={require('../image/lightning_icon/K_ICON_CR.png') } 
-                    style={{ width: 23, height: 23 }}
+                    style={{ width: 20, height: 20 }}
                   /> {'> 0-5 นาที'}
                 </Text>
             
             <Text style={styles.boxtext2}>
             <Image 
               source={require('../image/lightning_icon/K_ICON_CO.png') } 
-              style={{ width: 23, height: 23 }} 
+              style={{ width: 20, height: 20 }} 
             /> {'> 5-10 นาที'} 
             </Text>
 
             <Text style={styles.boxtext3}>
             <Image 
               source={require('../image/lightning_icon/K_ICON_CY.png') } 
-              style={{ width: 23, height: 23 }} 
+              style={{ width: 20, height: 20 }} 
             /> {'> 10-15 นาที'}
             </Text>
             </View>
@@ -166,17 +166,17 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   boxtitle: {
-    fontSize: 15,
+    fontSize: 11,
     fontWeight: 'bold',
   },
   boxtext1: {
-    fontSize: 12,
+    fontSize: 10,
   },
   boxtext2: {
-    fontSize: 12,
+    fontSize: 10,
   },
   boxtext3: {
-    fontSize: 12,
+    fontSize: 10,
   },
   legendTop: {
     position: 'absolute',

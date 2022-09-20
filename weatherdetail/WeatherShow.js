@@ -122,7 +122,7 @@ const WeatherShow = () => {
         flex: 1,
         flexDirection: 'row',
         backgroundColor: '#fff',
-        padding: 20,
+        padding: 15,
         borderRadius: 30,
         borderBottomColor: '#D3D3D3',
         borderBottomWidth: 3, 
@@ -158,8 +158,7 @@ const WeatherShow = () => {
         paddingLeft: 10,
     },
     title: {
-        fontSize: 15,
-        fontWeight: '10',
+        fontSize: 12,
     },
 
 })

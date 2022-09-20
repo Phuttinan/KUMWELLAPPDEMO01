@@ -63,7 +63,7 @@ const Rain = () => {
            <View style={styles.humid} >
                     <Image
                         source={require('../image/weather/Humidity.png')}
-                        style={{ width: 50, height: 50 }}
+                        style={{ width: 45, height: 45 }}
                             
                     />
                     <Text style={styles.humiditydetails}> ความชื้นสัมพัทธ์ </Text> 
@@ -72,7 +72,7 @@ const Rain = () => {
                 <View style={styles.rainy}>
                     <Image
                             source={require('../image/weather/Rainper.png')}
-                            style={{ width: 50, height: 50 }}
+                            style={{ width: 45, height: 45 }}
                             
                     />
                     <Text style={styles.raindetails}> เปอร์เซ็นต์ฝนตก</Text> 
@@ -81,7 +81,7 @@ const Rain = () => {
                 <View style={styles.rainvalu}>
                     <Image
                             source={require('../image/weather/Nice_today.png')}
-                            style={{ width: 50, height: 50 }}            
+                            style={{ width: 43, height: 43 }}            
                     />
                     <Text style={styles.rainvaludetails}> ปริมาณน้ำฝน </Text> 
                     <Text style={styles.rainvaludetails}> 3 ชม. : 4 มม. </Text>
@@ -92,7 +92,7 @@ const Rain = () => {
                 <View style={styles.humid} >
                     <Image
                         source={require('../image/weather/Humidity.png')}
-                        style={{ width: 50, height: 50 }}
+                        style={{ width: 45, height: 45 }}
                             
                     />
                     <Text style={styles.humiditydetails}> ความชื้นสัมพัทธ์ </Text> 
@@ -101,7 +101,7 @@ const Rain = () => {
                 <View style={styles.rainy}>
                     <Image
                             source={require('../image/weather/Rainper.png')}
-                            style={{ width: 50, height: 50 }}
+                            style={{ width: 45, height: 45 }}
                             
                     />
                     <Text style={styles.raindetails}> เปอร์เซ็นต์ฝนตก</Text> 
@@ -110,7 +110,7 @@ const Rain = () => {
                 <View style={styles.rainvalu}>
                     <Image
                             source={require('../image/weather/Nice_today.png')}
-                            style={{ width: 50, height: 50 }}            
+                            style={{ width: 43, height: 43 }}            
                     />
                     <Text style={styles.rainvaludetails}> ปริมาณน้ำฝน </Text> 
                     <Text style={styles.rainvaludetails}> 3 ชม. : 4 มม. </Text>
@@ -167,19 +167,16 @@ const styles = StyleSheet.create({
         
     },
     humiditydetails: {
-        fontSize: 15,
-        fontWeight: '10',
+        fontSize: 12,
         marginTop: 5,
     },
     raindetails: {
-        fontSize: 15,
-        fontWeight: '10',
+        fontSize: 12,
         marginTop: 5,
 
     },
     rainvaludetails: {
-        fontSize: 15,
-        fontWeight: '10',
+        fontSize: 12,
         marginTop: 5,
     },
 

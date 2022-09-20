@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
   legendTopSubText: {
     fontWeight: "bold",
     color:"white",
-    fontSize: 15,
+    fontSize: 12,
     fontStyle: "normal",
   },
   lightningFive: {

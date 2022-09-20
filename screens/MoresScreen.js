@@ -10,17 +10,17 @@ const MoresScreen = ({navigation}) => {
         <ScrollView style={styles.container} >
             <View style={styles.information}>
                 <Text style={styles.textinformation} onPress={() => navigation.navigate('Informations')}>
-                    <MaterialCommunityIcons name='information-outline' size={25} />    Informations
+                    <MaterialCommunityIcons name='information-outline' size={25} />    วิธีการใช้งาน
                 </Text>
             </View>
             <View style={styles.setting}>
                 <Text style={styles.textsetting} onPress={() => navigation.navigate('Setting')}>
-                    <MaterialCommunityIcons name='cog-outline' size={25} />    Setting
+                    <MaterialCommunityIcons name='cog-outline' size={25} />    ตั้งค่าระบบ
                 </Text>
             </View>
             <View style={styles.contact}>
                 <Text style={styles.textcontact} onPress={() => navigation.navigate('Contact')}>
-                    <MaterialCommunityIcons name='contacts-outline' size={25} />    Contact
+                    <MaterialCommunityIcons name='contacts-outline' size={25} />    ติดต่อ
                 </Text>
             </View>
             <View style={styles.splace}>
@@ -48,7 +48,7 @@ const MoresScreen = ({navigation}) => {
         flexWrap: 'wrap',
     },
     textinformation: {
-        fontSize: 20,
+        fontSize: 18,
         fontWeight: '300',
           
     },
@@ -62,7 +62,7 @@ const MoresScreen = ({navigation}) => {
         flexWrap: 'wrap',
     },
     textsetting: {
-        fontSize: 20,
+        fontSize: 18,
         fontWeight: '300',
           
     },
@@ -76,7 +76,7 @@ const MoresScreen = ({navigation}) => {
         flexWrap: 'wrap',
     },
     textcontact: {
-        fontSize: 20,
+        fontSize: 18,
         fontWeight: '300',
           
     },

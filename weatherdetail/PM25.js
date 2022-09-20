@@ -71,8 +71,8 @@ const PM25 = () => {
                 <View style={styles.PM25details}>
                     <PMICON /> 
                     <Text style={styles.PMtext}>PM 2.5</Text>
-                    <Text style={styles.pm25text}> : {Math.round(data.list[0].components.pm2_5)} </Text>
-                    <Text style={styles.pm25text2}>   ไมครอน</Text>
+                    <Text style={styles.pm25text}> :   {Math.round(data.list[0].components.pm2_5)} </Text>
+                    <Text style={styles.pm25text2}>ไมครอน</Text>
                 </View> 
             </View>  
         )}
@@ -89,8 +89,7 @@ const styles = StyleSheet.create({
 
     },
     PMtext: {
-        fontSize: 20,
-        fontWeight: '10'
+        fontSize: 15,
     },
     PM25: {
         flex: 1,
@@ -108,12 +107,10 @@ const styles = StyleSheet.create({
 
     },
     pm25text: {
-        fontSize: 18,
-        fontWeight: '10',
+        fontSize: 15,
     },
     pm25text2: {
         fontSize: 15,
-        fontWeight: '10',
     }
 });
 export default PM25;

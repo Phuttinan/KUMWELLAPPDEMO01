@@ -93,7 +93,7 @@ const MoreWeather = () => {
                         style={{ width: 60, height: 60 }}
                     /> 
                     {Math.round(data.main.temp - 273)}°</Text>
-                <Text style={styles.name}><Ionicons name='ios-location' size={30}/> {data.name} 
+                <Text style={styles.name}><Ionicons name='ios-location' size={20}/> {data.name} 
                     <Text style={styles.region}>  /{data.sys.country}</Text>
                 </Text>
                 <Text style={styles.main}> {Math.round(data.main.temp_max - 273)}° / {Math.round(data.main.temp_min - 273)}° </Text>
@@ -125,12 +125,12 @@ const MoreWeather = () => {
         flexWrap: 'nowrap',
     },
     temp: {
-        fontSize: 50,
+        fontSize: 45,
         fontWeight: '200', 
         marginBottom: 5,    
     },
     name: {
-        fontSize: 20,
+        fontSize: 18,
         fontWeight: '200',
         marginBottom: 10,
     },

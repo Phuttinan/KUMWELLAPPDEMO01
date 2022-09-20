@@ -101,8 +101,8 @@ const Humidity = () => {
         
     },
     title: {
-        fontSize: 15,
-        fontWeight: '10',
+        fontSize: 10,
+        fontWeight: '5',
         marginTop: 5,
         marginBottom: 10,
 
