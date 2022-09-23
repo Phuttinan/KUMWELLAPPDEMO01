@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef, useMemo } from "react";
 import { getDistance } from "geolib";
 import { LocationsContext } from "../contexts/LocationsContext";
 import { Text, StyleSheet, View } from "react-native";
@@ -10,9 +10,11 @@ const LightningCalculate = (props) => {
   const { dataLightnings } = props;
   const [dist, setDist] = useState(0);
   const [state, setState] = useState(0);
-  const [notify, setNotify] = useState([]);
-  var item = [];
-  var itemTimes = [];
+  const [notify, setNotify] = useState("kkk");
+  const prevDist = useRef();
+  let item = [];
+  let itemTimes = [];
+  let itemm = "";
 
   useEffect(() => {
     
@@ -37,17 +39,20 @@ const LightningCalculate = (props) => {
       }
       
     }
-    
+    //prevDist.current = parseInt(Math.min(...item));
     setDist(parseInt(Math.min(...item)));
-    //setNotify(itemTimes[item.indexOf(Math.min(...item))])
-    //setDist(11);
-    //console.log(item.indexOf(Math.min(...item)));
-    //console.log(itemTimes[item.indexOf(Math.min(...item))]);
-    console.log(item);
-  }, []);
+    //setDist(parseInt(Math.min.apply(null, item)));
+    setNotify(itemTimes[item.indexOf(Math.min(...item))]);
+    //setDist(0);
+    setState(dist);
+    
+  },[]);
 
-  console.log(dist);
-  //console.log(notify)
+  //console.log(dist);
+  
+  //console.log(location.coords.latitude
+
+
   if (dist > 10) {
     return (
       <View style={styles.legendTop}>
@@ -55,6 +60,17 @@ const LightningCalculate = (props) => {
       </View>
     );
   } else if (dist > 5 && dist <= 10) {
+    console.log("dist:",dist);
+    console.log("state:",state);
+    if(state !== 0) {
+      if( state !== dist) {
+        console.log("Noti");
+        Noti();
+      }
+    }
+    else {
+      console.log("else");
+    }
     return (
       <View style={styles.legendTopTen}>
         <Text style={styles.legendTopSubText}>
@@ -63,6 +79,17 @@ const LightningCalculate = (props) => {
       </View>
     );
   } else if (dist => 0 && dist <= 5) {
+    console.log("dist:",dist);
+    console.log("state:",state);
+    if(state !== 0) {
+      if( state !== dist) {
+        console.log("Noti");
+        Noti();
+      }
+    }
+    else {
+      console.log("else");
+    }
     return (
       <View style={styles.legendTopFive}> 
         <Text style={styles.legendTopSubText}> { dist === 0 

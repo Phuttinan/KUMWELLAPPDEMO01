@@ -7,7 +7,7 @@ const data_default = {"coords": {"accuracy": 12.904999732971191, "altitude": -21
 
 function LocationsContextProvider(props) {
     const [location, setLocation] = useState(data_default);
-    const [loading, setLoading] = useState([]);
+    const [loading, setLoading] = useState(true);
     const value = { location, loading };
 
     const getLoca = async () => {
@@ -36,7 +36,8 @@ function LocationsContextProvider(props) {
             }, 30000)
             return () => clearInterval(secTimer);
         }, []);
-    
+
+        //console.log(location.timestamp);
     /*function permissionLocation() {
         let { status } = Location.requestForegroundPermissionsAsync();
         if (status !== 'granted') {

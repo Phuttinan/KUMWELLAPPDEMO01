@@ -14,28 +14,6 @@ const LocationMap = () => {
     let [data, setData] = useState([]);
     let host = (Platform.OS == 'android') ? '58.97.57.113' : 'localhost'
 
-    // useEffect(() => {
-    //   (async () => {
-    //     let { status } = await Location.requestForegroundPermissionsAsync();
-    //     if (status !== 'granted') {
-    //       Alert.alert(
-    //         'Permission to access location was denied',
-    //         'go to setting',
-    //         [
-    //           {text: 'setting', onPress: () => {Linking.openSettings()}},
-    //           {text: 'close', onPress: () => {}}
-    //         ]
-    //       );
-    //       return;
-    //     }
-        
-    //     let location = await Location.getCurrentPositionAsync({});
-    //     setLocation(location);
-    //     setLoading(false);
-  
-    //   })();
-    // }, []);
-
     useEffect(() => { 
       fetch(`http://${host}/LLSApp/jgetlast1hr.php`)
             .then(response => response.json())

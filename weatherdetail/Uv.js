@@ -37,7 +37,7 @@ const RainValu = () => {
       setLocation(location);
 
       fetch(
-        `http://api.weatherapi.com/v1/current.json?key=1ca8816146244268a7914515220709&q=${location.coords.latitude},${location.coords.longitude}`
+        `http://api.weatherapi.com/v1/current.json?key=eea1ab56fbfd4c30a17191015222309&q=${location.coords.latitude},${location.coords.longitude}`
       )
         .then((response) => response.json())
         .then((json) => setData(json))
@@ -58,7 +58,7 @@ const RainValu = () => {
         setLocation(location);
 
         fetch(
-          `http://api.weatherapi.com/v1/current.json?key=1ca8816146244268a7914515220709&q=${location.coords.latitude},${location.coords.longitude}`
+          `http://api.weatherapi.com/v1/current.json?key=eea1ab56fbfd4c30a17191015222309&q=${location.coords.latitude},${location.coords.longitude}`
         )
           .then((response) => response.json())
           .then((json) => setData(json))
