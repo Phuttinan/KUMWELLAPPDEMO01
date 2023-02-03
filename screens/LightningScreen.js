@@ -12,7 +12,7 @@ const LocationMap = () => {
     //const [errorMsg, setErrorMsg] = useState(null);
     //const [loading, setLoading] = useState([]);
     let [data, setData] = useState([]);
-    let host = (Platform.OS == 'android') ? '58.97.57.113' : 'localhost'
+    let host = (Platform.OS == 'android') ? '103.28.240.85' : 'localhost'
 
     useEffect(() => { 
       fetch(`http://${host}/LLSApp/jgetlast1hr.php`)
@@ -62,11 +62,11 @@ const LocationMap = () => {
                         <Marker 
                           coordinate={{latitude: newLat, 
                           longitude: location.coords.longitude}}
-                          icon={require('../assets/5.png')}>
+                          icon={require('../assets/51.png')}>
                         </Marker>
                         <Marker coordinate={{latitude: newLat1, 
                           longitude: location.coords.longitude}}
-                          icon={require('../assets/10.png')}>
+                          icon={require('../assets/101.png')}>
                         </Marker>
                         <Circle 
                         center={{ 

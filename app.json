@@ -1,53 +1,58 @@
 {
-    "expo": {
-        "name": "Lightning Warning DEMO",
-        "slug": "LightningWarningDEMO",
-        "version": "1.0.5",
-        "orientation": "portrait",
-        "icon": "./assets/ICONNEW.png",
-        "userInterfaceStyle": "light",
-        "splash": {
-            "image": "./assets/Lightning.png",
-            "resizeMode": "contain",
-            "backgroundColor": "#ffffff"
-        },
-        "plugins": [
-            ["expo-notifications",
-                {
-                    "icon": "./assets/iconkumwell.png",
-                    "color": "#ffffff"
-                }
-            ]
-        ],
-        "updates": {
-            "fallbackToCacheTimeout": 0
-        },
-        "assetBundlePatterns": [
-            "**/*"
-        ],
-        "ios": {
-            "supportsTablet": true
-        },
-        "android": {
-            "adaptiveIcon": {
-                "foregroundImage": "./assets/ICONNEW.png",
-                "backgroundColor": "#FFFFFF"
-            },
-            "config": {
-                "googleMaps": {
-                    "apiKey": "AIzaSyBU7NNfWRLwiLEglDDTQxGC4dSsgCeECSg"
-
-                }
-            },
-            "permissions": [
-                "ACCESS_FINE_LOCATION",
-                "ACCESS_BACKGROUND_LOCATION"
-            ],
-            "package": "com.benz27.LightningWarningDEMO",
-            "versionCode": 1
-        },
-        "web": {
-            "favicon": "./assets/favicon.png"
+  "expo": {
+    "name": "Lightning Warning DEMO",
+    "slug": "LightningWarningDEMO",
+    "version": "1.0.6",
+    "orientation": "portrait",
+    "icon": "./assets/ICONNEW.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/Lightning.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/iconkumwell.png",
+          "color": "#ffffff"
         }
+      ]
+    ],
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/ICONNEW.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBU7NNfWRLwiLEglDDTQxGC4dSsgCeECSg"
+        }
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION"
+      ],
+      "package": "com.benz27.LightningWarningDEMO",
+      "versionCode": 1
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a08cf2c6-c21e-4622-82c3-9249dd676e7a"
+      }
     }
+  }
 }

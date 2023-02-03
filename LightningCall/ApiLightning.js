@@ -6,7 +6,7 @@ import axios from "axios";
 
 async function fetchLightning() {
     const { data } = await axios.get(
-      "http://58.97.57.113/LLSApp/jgetlast1hr.php"
+      "http://103.28.240.85/LLSApp/jgetlast1hr.php"
     );
     return data;
   }

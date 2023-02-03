@@ -10,7 +10,7 @@ import {
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import * as Location from "expo-location";
 
-//http://api.weatherapi.com/v1/current.json?key=963ce7739c164d51abe144003222308&q=13.7563309,100.5017651
+//http://api.weatherapi.com/v1/current.json?key=7b0c693be52f4d02b4e104427233001&q=13.7563309,100.5017651
 
 const RainValu = () => {
   const [location, setLocation] = useState(null);
@@ -24,7 +24,6 @@ const RainValu = () => {
   date = date.slice(3, 21);
 
   useEffect(() => {
-
     (async () => {
       let { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== "granted") {
@@ -37,14 +36,14 @@ const RainValu = () => {
       setLocation(location);
 
       fetch(
-        `http://api.weatherapi.com/v1/current.json?key=eea1ab56fbfd4c30a17191015222309&q=${location.coords.latitude},${location.coords.longitude}`
+        `http://api.weatherapi.com/v1/current.json?key=7b0c693be52f4d02b4e104427233001&q=${location.coords.latitude},${location.coords.longitude}`
       )
         .then((response) => response.json())
         .then((json) => setData(json))
         .catch((error) => console.error(error))
         .finally(() => setLoading(false));
     })();
-    
+
     let secTimer = setInterval(() => {
       (async () => {
         let { status } = await Location.requestForegroundPermissionsAsync();
@@ -58,7 +57,7 @@ const RainValu = () => {
         setLocation(location);
 
         fetch(
-          `http://api.weatherapi.com/v1/current.json?key=eea1ab56fbfd4c30a17191015222309&q=${location.coords.latitude},${location.coords.longitude}`
+          `http://api.weatherapi.com/v1/current.json?key=7b0c693be52f4d02b4e104427233001&q=${location.coords.latitude},${location.coords.longitude}`
         )
           .then((response) => response.json())
           .then((json) => setData(json))
@@ -86,9 +85,7 @@ const RainValu = () => {
             style={{ width: 60, height: 60 }}
           />
           <Text style={{ fontSize: 12 }}>ดัชนี UV</Text>
-          <Text style={{ fontSize: 12}}>
-            {data.current.uv}
-          </Text>
+          <Text style={{ fontSize: 12 }}>{data.current.uv}</Text>
         </View>
       )}
     </View>

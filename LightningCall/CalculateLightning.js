@@ -17,14 +17,13 @@ const LightningCalculate = (props) => {
   let itemm = "";
 
   useEffect(() => {
-    
     for (let i = 0; i < dataLightnings.length; i++) {
       let lat = parseFloat(dataLightnings[i].LAT);
       let lon = parseFloat(dataLightnings[i].LON);
       let dateLightnings = new Date(dataLightnings[i].DAT);
-      let uTimeLightning = Math.floor(dateLightnings.getTime()/1000);
+      let uTimeLightning = Math.floor(dateLightnings.getTime() / 1000);
       let fifteenMinCount = uTimeLightning + 900;
-      let uTimeNow = (Date.now()/1000);
+      let uTimeNow = Date.now() / 1000;
       //let uTimeFifteen = ((Date.now()/1000)-900);
       let dis = getDistance(
         { latitude: lat, longitude: lon },
@@ -33,11 +32,10 @@ const LightningCalculate = (props) => {
           longitude: location.coords.longitude,
         }
       );
-      if (dataLightnings[i].TYP === "1" && fifteenMinCount > uTimeNow){
+      if (dataLightnings[i].TYP === "1" && fifteenMinCount > uTimeNow) {
         item.push(dis / 1000);
         itemTimes.push(dateLightnings);
       }
-      
     }
     //prevDist.current = parseInt(Math.min(...item));
     setDist(parseInt(Math.min(...item)));
@@ -45,13 +43,11 @@ const LightningCalculate = (props) => {
     setNotify(itemTimes[item.indexOf(Math.min(...item))]);
     //setDist(0);
     setState(dist);
-    
-  },[]);
+  }, []);
 
   //console.log(dist);
-  
-  //console.log(location.coords.latitude
 
+  //console.log(location.coords.latitude
 
   if (dist > 10) {
     return (
@@ -60,41 +56,37 @@ const LightningCalculate = (props) => {
       </View>
     );
   } else if (dist > 5 && dist <= 10) {
-    console.log("dist:",dist);
-    console.log("state:",state);
-    if(state !== 0) {
-      if( state !== dist) {
+    console.log("dist:", dist);
+    console.log("state:", state);
+    if (state !== 0) {
+      if (state !== dist) {
         console.log("Noti");
         Noti();
       }
-    }
-    else {
+    } else {
       console.log("else");
     }
     return (
       <View style={styles.legendTopTen}>
-        <Text style={styles.legendTopSubText}>
-          ฟ้าผ่าในระยะ {dist} กม.
-          </Text>
+        <Text style={styles.legendTopSubText}>ฟ้าผ่าในระยะ {dist} กม.</Text>
       </View>
     );
-  } else if (dist => 0 && dist <= 5) {
-    console.log("dist:",dist);
-    console.log("state:",state);
-    if(state !== 0) {
-      if( state !== dist) {
+  } else if ((dist) => 0 && dist <= 5) {
+    console.log("dist:", dist);
+    console.log("state:", state);
+    if (state !== 0) {
+      if (state !== dist) {
         console.log("Noti");
         Noti();
       }
-    }
-    else {
+    } else {
       console.log("else");
     }
     return (
-      <View style={styles.legendTopFive}> 
-        <Text style={styles.legendTopSubText}> { dist === 0 
-        ? <Text>ฟ้าผ่าในระยะน้อยกว่า 1 กม.</Text>  
-        : <Text>ฟ้าผ่าในระยะ {dist} กม.</Text>}
+      <View style={styles.legendTopFive}>
+        <Text style={styles.legendTopSubText}>
+          {" "}
+          {dist === 0 ? <Text>`ปลอดภัย`</Text> : <Text>ปลอดภัย</Text>}
         </Text>
       </View>
     );
@@ -116,7 +108,7 @@ const styles = StyleSheet.create({
     top: 10,
     padding: 10,
     borderRadius: 10,
-    backgroundColor: "rgba(237, 28, 36, 0.8)",
+    backgroundColor: "rgba(77, 203, 102, 0.8)",
     opacity: 1,
   },
   legendTopTen: {
@@ -140,7 +132,7 @@ const styles = StyleSheet.create({
   },
   legendTopSubText: {
     fontWeight: "bold",
-    color:"white",
+    color: "white",
     fontSize: 14,
     fontStyle: "normal",
   },
