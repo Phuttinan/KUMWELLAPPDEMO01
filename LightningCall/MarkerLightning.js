@@ -19,7 +19,7 @@ function LightningMarker(props) {
         return (
           <Marker 
             coordinate={{latitude : parseFloat(dataLightnings.LAT), longitude : parseFloat(dataLightnings.LON)}}
-            tracksViewChanges={false} icon={require('../image/lightning_icon/K_ICON_CR.png')}
+            tracksViewChanges={false} icon={require('../image/lightning_icon1/K_ICON_CR.png')}
           />
         )
       }
@@ -27,7 +27,7 @@ function LightningMarker(props) {
         return (
           <Marker 
             coordinate={{latitude : parseFloat(dataLightnings.LAT), longitude : parseFloat(dataLightnings.LON)}}
-            tracksViewChanges={false} icon={require('../image/lightning_icon/K_ICON_CO.png')}
+            tracksViewChanges={false} icon={require('../image/lightning_icon1/K_ICON_CO.png')}
           />
         )
       }
@@ -35,7 +35,7 @@ function LightningMarker(props) {
         return (
           <Marker 
             coordinate={{latitude : parseFloat(dataLightnings.LAT), longitude : parseFloat(dataLightnings.LON)}}
-            tracksViewChanges={false} icon={require('../image/lightning_icon/K_ICON_CY.png')}
+            tracksViewChanges={false} icon={require('../image/lightning_icon1/K_ICON_CY.png')}
           />
         )
       }
@@ -45,7 +45,7 @@ function LightningMarker(props) {
         return (
           <Marker 
             coordinate={{latitude : parseFloat(dataLightnings.LAT), longitude : parseFloat(dataLightnings.LON)}}
-            tracksViewChanges={false} icon={require('../image/lightning_icon/K_ICON_CCR.png')}
+            tracksViewChanges={false} icon={require('../image/lightning_icon1/K_ICON_CCR.png')}
           />
         )
       }
@@ -53,7 +53,7 @@ function LightningMarker(props) {
         return (
           <Marker 
             coordinate={{latitude : parseFloat(dataLightnings.LAT), longitude : parseFloat(dataLightnings.LON)}}
-            tracksViewChanges={false} icon={require('../image/lightning_icon/K_ICON_CCO.png')}
+            tracksViewChanges={false} icon={require('../image/lightning_icon1/K_ICON_CCO.png')}
           />
         )
       }
@@ -61,7 +61,7 @@ function LightningMarker(props) {
         return (
           <Marker 
             coordinate={{latitude : parseFloat(dataLightnings.LAT), longitude : parseFloat(dataLightnings.LON)}}
-            tracksViewChanges={false} icon={require('../image/lightning_icon/K_ICON_CCY.png')}
+            tracksViewChanges={false} icon={require('../image/lightning_icon1/K_ICON_CCY.png')}
           />
         )
       }
